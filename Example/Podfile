@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'RDKeyboardEqualView', :exclusive => true do
+  pod "RDKeyboardEqualView", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "RDKeyboardEqualView", :path => "../"
+
+  pod 'FBSnapshotTestCase'
+end

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RDViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-gh-lio">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NGC6559.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DJW-0e-Uzc">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap here to open keyboard" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02E-w7-Phs">
+                                        <rect key="frame" x="63" y="269" width="194" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="4Jj-yT-8Hp"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DJW-0e-Uzc" secondAttribute="bottom" id="0Bj-dc-o71"/>
+                                    <constraint firstAttribute="centerX" secondItem="02E-w7-Phs" secondAttribute="centerX" id="5Gc-4d-CFe"/>
+                                    <constraint firstAttribute="trailing" secondItem="DJW-0e-Uzc" secondAttribute="trailing" id="9UR-n5-fkt"/>
+                                    <constraint firstAttribute="centerY" secondItem="02E-w7-Phs" secondAttribute="centerY" id="ByQ-eq-rEz"/>
+                                    <constraint firstItem="DJW-0e-Uzc" firstAttribute="top" secondItem="9Qa-gh-lio" secondAttribute="top" id="EFL-MY-n2e"/>
+                                    <constraint firstItem="DJW-0e-Uzc" firstAttribute="leading" secondItem="9Qa-gh-lio" secondAttribute="leading" id="mhz-Xq-fQc"/>
+                                </constraints>
+                            </view>
+                            <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efY-PV-u2S" customClass="RDKeyboardEqualView">
+                                <rect key="frame" x="0.0" y="568" width="320" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="3e1-ot-xPp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="followsKeyboardHeight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="heightConstraint" destination="3e1-ot-xPp" id="rc5-Vm-D4x"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="efY-PV-u2S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7bo-em-L28"/>
+                            <constraint firstAttribute="bottom" secondItem="efY-PV-u2S" secondAttribute="bottom" id="FBH-LL-lqu"/>
+                            <constraint firstItem="9Qa-gh-lio" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="JL0-20-uW0"/>
+                            <constraint firstAttribute="trailing" secondItem="efY-PV-u2S" secondAttribute="trailing" id="NSd-VO-t5c"/>
+                            <constraint firstAttribute="trailing" secondItem="9Qa-gh-lio" secondAttribute="trailing" id="WCF-Jm-qVu"/>
+                            <constraint firstItem="efY-PV-u2S" firstAttribute="top" secondItem="9Qa-gh-lio" secondAttribute="bottom" id="ntK-cK-lld"/>
+                            <constraint firstItem="9Qa-gh-lio" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zfF-hz-ohL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NGC6559.jpg" width="2014" height="1940"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
